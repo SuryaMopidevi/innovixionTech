@@ -19,6 +19,7 @@ def NumberGuess(compNum):
         except ValueError:
             print("Invalid input. Please enter a numeric value.")
         count+=1
+        
     # output generation 
     if pin==0:
         print(f"Congo you guessed the number")

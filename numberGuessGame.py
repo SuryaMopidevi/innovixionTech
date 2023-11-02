@@ -1,13 +1,12 @@
 import random
 
 def NumberGuess(compNum):
-    count=1
+    count,pin=1,1
     while count<4:
         try:
-            print(f"Chance number : {count}")
+            print(f"{count})" ,end="")
             userGuess = input("Guess Number : ")
             userGuess = int(userGuess)
-            pin=1
             if userGuess >= 0:
                 if userGuess == compNum :
                     pin=0
@@ -17,11 +16,11 @@ def NumberGuess(compNum):
                 print("Invalid input. Please enter a numeric value between 0-10 only")
         except ValueError:
             print("Invalid input. Please enter a numeric value.")
-
         count+=1
     if pin==0:
         print(f"Congo you guessed the number")
     else:
+        print(f"Computer Number : {compNum}")
         print(f"You lost ")
 
 

@@ -1,22 +1,25 @@
 import random
 
+# function for guessing game 
 def NumberGuess(compNum):
+    # initialising limit 
     count,pin=1,1
     while count<4:
         try:
             print(f"{count})" ,end="")
+            # number guessing 
             userGuess = input("Guess Number : ")
             userGuess = int(userGuess)
             if userGuess >= 0:
                 if userGuess == compNum :
                     pin=0
                     break
-
             else:
                 print("Invalid input. Please enter a numeric value between 0-10 only")
         except ValueError:
             print("Invalid input. Please enter a numeric value.")
         count+=1
+    # output generation 
     if pin==0:
         print(f"Congo you guessed the number")
     else:

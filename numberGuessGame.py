@@ -15,11 +15,13 @@ def NumberGuess(compNum):
                     pin=0
                     break
             else:
+                # message for invalid input 
                 print("Invalid input. Please enter a numeric value between 0-10 only")
         except ValueError:
+            # message for invalid input (other than numeric value)
             print("Invalid input. Please enter a numeric value.")
         count+=1
-        
+
     # output generation 
     if pin==0:
         print(f"Congo you guessed the number")

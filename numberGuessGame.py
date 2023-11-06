@@ -15,7 +15,7 @@ def NumberGuess(compNum):
                     pin=0
                     break
             else:
-                # message for invalid input 
+                # message for invalid numerical input 
                 print("Invalid input. Please enter a numeric value between 0-10 only")
         except ValueError:
             # message for invalid input (other than numeric value)

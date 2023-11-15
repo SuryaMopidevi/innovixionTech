@@ -8,9 +8,9 @@ def addContact():
     address=input("Enter address : ")
     phoneNumber=int(input("Enter phone number : "))
     contact[name]={
-        "Email" : Email,
-        "PhoneNumber" : phoneNumber,
-        "Address" : address
+        'Email': Email,
+        'PhoneNumber': phoneNumber,
+        'Address': address
     }
     print(f"{name} is added to contact list")
 
@@ -21,9 +21,10 @@ def viewContact():
     else:
         for name in contact.keys():
             print(f"{name} contact details : ")
-            print(f"Email : {contact[name]['Email']}")
-            print(f"Phone Number : {contact[name]['PhoneNumber']}")
-            print(f"Address : {contact[name]['Address']}")
+            # print(f"Email : {contact[name]['Email']}")
+            # print(f"Phone Number : {contact[name]['PhoneNumber']}")
+            # print(f"Address : {contact[name]['Address']}")
+            print(contact[name])
 
 
 # searching contact based on contact name
@@ -56,26 +57,22 @@ def updateContact():
         # updating phone number 
         if update=='p':
             ph=int(input("enter phone number to update : "))
-            contact[name]={
-            "PhoneNumber " : ph
-            }
-            print(f"{name}'s {contact[name]} is updated...")
+            contact[name]['PhoneNumber']=ph
+            # 'PhoneNumber': ph
+            # }
+            print(f"{name}'s Phone number : {contact[name]['PhoneNumber']} is updated...")
 
         # updating address
         elif update=='a':
             ad=input("enter address to update : ")
-            contact[name]={
-            "address " : ad
-            }
-            print(f"{name}'s {contact[name]['address']} is updated...")
+            contact[name]['Address']=ad
+            print(f"{name}'s  address : {contact[name]['Address']} is updated...")
 
         # updating email
         elif update=='e':
             em=input("enter email to update : ")
-            contact[name]={
-            "Email " : em
-            }
-            print(f"{name}'s {contact[name]['Email']} is updated...")
+            contact[name]['Email']=em
+            print(f"{name}'s Email : {contact[name]['Email']} is updated...")
         else:
             print("Error due to invalid input")
             print(f"{name} contact list is not updated...")

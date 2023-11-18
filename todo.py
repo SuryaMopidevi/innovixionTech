@@ -12,13 +12,16 @@ def viewTask():
         print("Wohooo .... no tasks ")
     else:
         print("Tasks need to be perform : ")
-        for task in toDoList:
-            print(task,end=" ")
+        print("List of tasks : ")
+        print(toDoList,end="")
         print("\n")
 
 # updating task
 def updateTask():
-    taskNumber=int(input("Enter the task number to update : "))
+    print("List of tasks : ")
+    print(toDoList,end="")
+    print("\n")
+    taskNumber=int(input("Enter the task number to update (start from 0) : "))
     if not toDoList:
         print("no tasks yet ....")
     elif taskNumber >=len(toDoList) or taskNumber <0 :
